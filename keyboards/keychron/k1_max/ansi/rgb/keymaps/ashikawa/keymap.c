@@ -144,45 +144,6 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             return false;
             
-        case US_3:
-            if (record->event.pressed) {
-                if (saved_mods & MOD_MASK_SHIFT) {
-                    // Shift+3で#を出力 → 日本語配列でShift+3
-                    clear_mods();
-                    tap_code16(S(KC_3));
-                    set_mods(saved_mods);
-                } else {
-                    tap_code(KC_3);
-                }
-            }
-            return false;
-            
-        case US_4:
-            if (record->event.pressed) {
-                if (saved_mods & MOD_MASK_SHIFT) {
-                    // Shift+4で$を出力 → 日本語配列でShift+4
-                    clear_mods();
-                    tap_code16(S(KC_4));
-                    set_mods(saved_mods);
-                } else {
-                    tap_code(KC_4);
-                }
-            }
-            return false;
-            
-        case US_5:
-            if (record->event.pressed) {
-                if (saved_mods & MOD_MASK_SHIFT) {
-                    // Shift+5で%を出力 → 日本語配列でShift+5
-                    clear_mods();
-                    tap_code16(S(KC_5));
-                    set_mods(saved_mods);
-                } else {
-                    tap_code(KC_5);
-                }
-            }
-            return false;
-            
         case WIN_6:
             if (record->event.pressed) {
                 if (saved_mods & MOD_MASK_SHIFT) {
